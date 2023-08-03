@@ -21,7 +21,9 @@
         
         
     }
-    alert(`you picked rock' computer slects ${computer_selects} and the results is ${results}`)
+    
+    alert(`you picked rock' computer slects ${computer_selects} and the results is ${results} 
+  wins: ${score.wins} ,looses: ${score.losses} ties:${score.ties}`)
         "
     >
       ROCK
@@ -41,7 +43,8 @@
       
       
   }
-  alert(`you picked paper' computer slects ${computer_selects} and the results is ${results}`)
+  alert(`you picked paper' computer slects ${computer_selects} and the results is ${results}
+wins: ${score.wins} ,looses: ${score.losses} ties:${score.ties}`)
       "
     >
       PAPER
@@ -61,7 +64,8 @@
       
       
   }
-  alert(`you picked SCISSORS' computer slects ${computer_selects} and the results is ${results}`)
+  alert(`you picked SCISSORS' computer slects ${computer_selects} and the results is ${results}
+  wins: ${score.wins} ,looses: ${score.losses} ties:${score.ties}`)
       "
     >
       SCISSORS
@@ -76,6 +80,20 @@
           computer_selects = "paper";
         } else if (RandmNumber > 2 / 3 && RandmNumber < 1) {
           computer_selects = "SCISSORS";
+        }
+      }
+      const score = {
+        wins: 0,
+        losses: 0,
+        ties: 0,
+      };
+      function score_cal() {
+        if (results === "you win") {
+          score.wins += 1;
+        } else if (results === "you lose") {
+          score.losses += 0;
+        } else if (results === "tie") {
+          score.ties += 1;
         }
       }
     </script>
