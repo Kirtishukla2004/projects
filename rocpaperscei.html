@@ -8,18 +8,7 @@
   <body>
     <button
       onclick="
-      const RandmNumber= Math.random();
-      let computer_selects=' ';
-      if(RandmNumber>=0 && RandmNumber<1/3){
-        computer_selects='rock';
-    }
-   else if(RandmNumber>1/3 && RandmNumber<2/3){
-        computer_selects='paper';
-    }
-   else if(RandmNumber>2/3 && RandmNumber<1)
-   {
-    computer_selects='SCISSORS';
-   }
+      computerpick();
    let results=' ';
    
    if(computer_selects==='rock'){
@@ -38,20 +27,8 @@
       ROCK
     </button>
     <button
-    
-    onclick="
-    const RandmNumber= Math.random();
-    let computer_selects=' ';
-    if(RandmNumber>=0 && RandmNumber<1/3){
-      computer_selects='rock';
-  }
- else if(RandmNumber>1/3 && RandmNumber<2/3){
-      computer_selects='paper';
-  }
- else if(RandmNumber>2/3 && RandmNumber<1)
- {
-  computer_selects='SCISSORS';
- }
+      onclick="
+    computerpick();
  let results=' ';
  
  if(computer_selects==='rock'){
@@ -66,22 +43,12 @@
   }
   alert(`you picked paper' computer slects ${computer_selects} and the results is ${results}`)
       "
-    
-    >PAPER</button>
+    >
+      PAPER
+    </button>
     <button
-    onclick="
-    const RandmNumber= Math.random();
-    let computer_selects=' ';
-    if(RandmNumber>=0 && RandmNumber<1/3){
-      computer_selects='rock';
-  }
- else if(RandmNumber>1/3 && RandmNumber<2/3){
-      computer_selects='paper';
-  }
- else if(RandmNumber>2/3 && RandmNumber<1)
- {
-  computer_selects='SCISSORS';
- }
+      onclick="
+      computerpick();
  let results=' ';
  
  if(computer_selects==='rock'){
@@ -96,8 +63,21 @@
   }
   alert(`you picked SCISSORS' computer slects ${computer_selects} and the results is ${results}`)
       "
-    
-    >SCISSORS</button>
-    <script></script>
+    >
+      SCISSORS
+    </button>
+    <script>
+      const RandmNumber = Math.random();
+      let computer_selects = " ";
+      function computerpick() {
+        if (RandmNumber >= 0 && RandmNumber < 1 / 3) {
+          computer_selects = "rock";
+        } else if (RandmNumber > 1 / 3 && RandmNumber < 2 / 3) {
+          computer_selects = "paper";
+        } else if (RandmNumber > 2 / 3 && RandmNumber < 1) {
+          computer_selects = "SCISSORS";
+        }
+      }
+    </script>
   </body>
 </html>
