@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>youtube-subscribe-button</title>
+  </head>
+  <body>
+    <h1>youtube-subscribe -button</h1>
+    <button
+      onclick="
+      subscribed();
+    "
+      class="js-subscribe"
+      S
+    >
+      Subscribe
+    </button>
+    <p class="messege"></p>
+
+    <script>
+      let buttonElement = document.querySelector(".js-subscribe");
+      let messegeElement = document.querySelector(".messege");
+      function subscribed() {
+        if (buttonElement.innerHTML === "Subscribe") {
+          console.log((buttonElement.innerHTML = "Subscribed"));
+          buttonElement.classList.add("is-subscribed");
+          is_not_subscribes_channel();
+        } else {
+          buttonElement.innerHTML = "Subscribe";
+          buttonElement.classList.remove("is-subscribed");
+          is_subscribed_channel();
+        }
+      }
+
+      function is_subscribed_channel() {
+        messegeElement.innerHTML = "thank you for subscribing my channel ";
+      }
+      function is_not_subscribes_channel() {
+        messegeElement.innerHTML = "please subscribe to  my channel ";
+      }
+    </script>
+  </body>
+</html>
