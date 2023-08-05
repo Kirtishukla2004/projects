@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>amazon card</title>
+  </head>
+  <body>
+    <h1>amazon card</h1>
+    <p>order  below 40 charges shipping</p>
+    <p>order's above 40 will get free shipping</p>
+    <input
+      type="text"
+      class="input-cost"
+      placeholder="cost of product"
+      onkeydown="
+       handle_key_event(event)
+    "
+    />
+    <button class="js-calculate" onclick="calculate_shipping();">
+      calculate
+    </button>
+    <p class="cost_representer"></p>
+
+    <script>
+      function handle_key_event(event) {
+        if (event.key === "Enter") {
+          calculate_shipping();
+        }
+      }
+      function calculate_shipping() {
+        const inputElement = document.querySelector(".input-cost");
+        let cost = Number(inputElement.value);
+
+        if (cost <= 40) {
+          cost = cost + 10;
+          document.querySelector(
+            ".cost_representer"
+          ).innerHTML = ` total amount ${cost}`;
+        } else {
+          document.querySelector(
+            ".cost_representer"
+          ).innerHTML = ` congratulations free shipping  ${cost}`;
+        }
+      }
+    </script>
+  </body>
+</html>
