@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8th exercise</title>
+  </head>
+  <body>
+    1) basketball
+    <script>
+      function issame_method1(product1, product2) {
+        return (
+          product1.name === product2.name && product1.price === product2.price
+        );
+      }
+      function issame_method2(product1, product2) {
+        if (
+          product1.name === product2.name &&
+          product1.price === product2.price
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      //this is an product onject with contains name and price of a product basketball
+      const product = {
+        name: "basketball",
+        price: 2095,
+      };
+
+      console.log(product.name);
+      console.log(product.price);
+      const update_price = product.price + 500;
+      //8b update price by 500
+      console.log(update_price);
+      //8c adding new object value  and desplayong it on console
+      /* product["dilivary_time"] = "3days";
+       console.log(product);*/
+      //8d create two product and compare them in a function and tells the less expensive product
+      product_2 = {
+        name: "basketball",
+        price: 295,
+      };
+      compare_products();
+      function compare_products() {
+        if (product.price > product_2.price) {
+          console.log(
+            `product2=${product_2.price} is less expensive then product1 ${product.price}`
+          );
+        } else {
+          console.log(
+            `product1 =${proct.price}is more expensive then product2 ${product_2.price}`
+          );
+        }
+        console.log(issame_method1(product, product_2));
+        console.log(issame_method2(product, product_2));
+      }
+    </script>
+  </body>
+</html>
