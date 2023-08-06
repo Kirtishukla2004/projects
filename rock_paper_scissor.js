@@ -44,6 +44,7 @@ function playGame(playerMove) {
       result = "You lose.";
     } else if (computerMove === "scissors") {
       result = "You win.";
+
     }
   }
 
@@ -84,6 +85,8 @@ function pickComputerMove() {
   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
     computerMove = "scissors";
   }
+  //changes are done
+  
 
   return computerMove;
 }
