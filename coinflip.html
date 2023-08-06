@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coin flip game</title>
+  </head>
+  <body>
+    <button
+      class="head_choice"
+      onclick="
+    playgame('head');
+    "
+    >
+      HEAD
+    </button>
+    <button class="tail choice" onclick=" playgame('tail');">TAIL</button>
+    <p class="shows_selector"></p>
+    <script>
+      let score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        loose: 0,
+      };
+
+      function playgame(guess) {
+        const randomnumber = Math.random();
+        let result = "";
+        //method1
+        /*  if (randomnumber < 0.5) {
+          result = "heads";
+        } else {
+          result = "tail";
+        }*/
+        //method2
+        result = randomnumber < 0.5 ? "head" : "tail";
+        //method1 to find result
+        /*if (guess === "result") {
+          let decison = "you win";
+          console.log(decison);
+        } else {
+          decison = "you loose";
+          console.log(decison);
+        }*/
+        //method2 to find decision
+        decison = guess === result ? "you win" : "you loose";
+        console.log(decison);
+        if (decison === "you win") {
+          score.wins++;
+        } else {
+          score.loose++;
+        }
+
+        console.log(`wins${score.wins} looses ${score.loose}`);
+        localStorage.setItem("score", JSON.stringify(score));
+        document.querySelector(
+          ".shows_selector"
+        ).innerHTML = `you choose ${guess} computer gets ${result}`;
+      }
+    </script>
+  </body>
+</html>
