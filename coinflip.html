@@ -4,17 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>coin flip game</title>
+    <style>
+      div {
+        display: inline;
+      }
+      .head_choice
+      
+    </style>
   </head>
   <body>
-    <button
+    <div
       class="head_choice"
       onclick="
     playgame('head');
     "
     >
-      HEAD
-    </button>
-    <button class="tail choice" onclick=" playgame('tail');">TAIL</button>
+      <img src="images/icons8-coin-48.png" alt="head" />
+    </div>
+    <div class="tail_choice" onclick=" playgame('tail');">
+      <img src="images/icons8-coin-48 (1).png" alt="tail" />
+    </div>
     <p class="shows_selector"></p>
     <script>
       let score = JSON.parse(localStorage.getItem("score")) || {
@@ -25,23 +34,9 @@
       function playgame(guess) {
         const randomnumber = Math.random();
         let result = "";
-        //method1
-        /*  if (randomnumber < 0.5) {
-          result = "heads";
-        } else {
-          result = "tail";
-        }*/
-        //method2
+
         result = randomnumber < 0.5 ? "head" : "tail";
-        //method1 to find result
-        /*if (guess === "result") {
-          let decison = "you win";
-          console.log(decison);
-        } else {
-          decison = "you loose";
-          console.log(decison);
-        }*/
-        //method2 to find decision
+
         decison = guess === result ? "you win" : "you loose";
         console.log(decison);
         if (decison === "you win") {
