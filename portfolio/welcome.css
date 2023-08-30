@@ -77,7 +77,6 @@ ul {
   padding-top: 108px;
   padding-left: 70px;
 }
-}
 
 .heading h1 {
   color: #3c7f72;
@@ -151,7 +150,6 @@ ul {
 
 /* Contact section */
 .contact {
-  padding: 5rem 10%;
   text-align: center;
   background-color: #3c7f72;
   color: #ffffff;
@@ -164,7 +162,6 @@ ul {
 
 .contact .items {
   list-style: none;
-  padding: 2rem 0;
 }
 
 .contact .items li {
@@ -261,4 +258,21 @@ ul {
 .list_items {
   display: inline;
   margin-left: -30px;
+}
+.heading_contact {
+  color: white;
+}
+.items_contact {
+  padding-bottom: 30px;
+}
+.list_contact {
+  padding-bottom: 30px;
+  display: flex;
+}
+.I1 {
+  padding-left: 115px;
+}
+a {
+  color: white;
+  text-decoration: none;
 }
