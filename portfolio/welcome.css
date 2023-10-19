@@ -261,6 +261,7 @@ ul {
 }
 .heading_contact {
   color: white;
+  padding-bottom: 40px;
 }
 .items_contact {
   padding-bottom: 30px;
@@ -275,4 +276,8 @@ ul {
 a {
   color: white;
   text-decoration: none;
+}
+.list_elements {
+  background-color: #3c7f72;
+  padding-bottom: 30px;
 }
